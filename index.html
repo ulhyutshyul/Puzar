@@ -22,9 +22,101 @@
     </ul>
     <img class="puzar_right" src="0002-removebg-preview.png" width="300px" height="200px" alt="Пузырик">
 
-
+    <img class="boss_img_1" src="Booss-removebg-preview.png" alt="Босс"></img>
+    <div class="stage">
+        <div class="wrap">
+            <h2 class="Company">Компания:</h2>
+            </br>
+          <div class="square"><img src="My_Logo.jpeg" alt="Привет">Mr.Beaver</div></img></div>
+        </div>
+      </div>
+    <img class="chesse_img_1" src="Cheess-removebg-preview.png" alt="Цыпленок"></img>
+    </br>
+    </br>
+    </br>
+    <div class="Copna_div">
+        <p class="Copna">Создатель:</p>
+        <img class="Sozda_img" src="WhatsApp Image 2023-09-21 at 20.14.06.jpeg" alt="Эркебаев Искандер"></img>
+    </div>
+    </br>
+    <div class="Xrkebaev_Iskander">
+        <h1 class="Xrkebaev_Iskander_h1">Про создателя:</h1>
+        </br>
+        <p class="Xrkebaev_Iskander_p">Создатель это мальчик которого зовут Эркебаев Искандер. Искандеру 11 лет именно во стольео он сделал свой первый 2д платформер. Он также знает html, css, python, blender, unity, unreal engine 4, scratch. Да уже в ранном возросте он столько знает. Его называют то вирусом то гением. Почему вирусом потому что Искандер как вирус учит то движок то программу то язык прогроммировая. Кстате компания Mr.Beaver была создана Эркебаевым Искандером</p>
+    </div>
 
     <style>
+        .boss_img_1{
+            float: left;
+            transform: rotate(-30deg);
+            margin-top: 100px;
+        }
+        .chesse_img_1{
+            float: right;
+            transform: rotate(30deg);
+            margin-top: 100px;
+        }
+        .Xrkebaev_Iskander_p{
+            text-align: center;
+            margin-right: 15px;
+            margin-left: 15px;
+            font-size: 25px;
+        }
+        .Sozda_img{
+            opacity: 0.5;
+        }
+        .Sozda_img:hover{
+            opacity: 1;
+        }
+        .Copna{
+            font-size: 30px;
+            color: black;
+        }
+        .Company{
+            text-align: center;
+            color: black;
+
+        }
+        .square {
+            width: 200px;
+            height: 200px;
+            background: #e62a52;
+            border-radius: 8px;
+            font-size: 20px;
+            text-align: center;
+            font-size: 30px;
+            }
+
+            .square-animation {
+            animation: wipe-enter 2s 1
+            }
+            @keyframes wipe-enter {
+            0% {
+                transform: scale(0, .025)
+            }
+            50% {
+                transform: scale(1, .025)
+            }
+            }
+
+            .wrap {
+            display: flex;
+            }
+            .stage {
+            position: relative;
+            height: 250px;
+            margin-top: 110vh;
+            }
+            .stage, .stage-footer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            }
+            .stage-footer {
+            margin: 10px
+            }
+
+
         .Puzar_apk_and{
             background-color: greenyellow;
             margin: 10px 5px 10px 5px;
@@ -54,11 +146,33 @@
         }
         @keyframes spin {
             100% {transform: rotate(1turn); }
-        }
+        }  
         body{
             background-color: rgb(249, 252, 195);
         }
+
+        
+
     </style>
+    <script>(function () {
+        var square = document.querySelector('.square');
+      
+        var observer = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (typeof getCurrentAnimationPreference === 'function' && !getCurrentAnimationPreference()) {
+              return;
+            }
+      
+            if (entry.isIntersecting) {
+              entry.target.classList.add('square-animation');
+            }
+          });
+        });
+      
+        observer.observe(square);
+      })();
+      
+      </script>
 </body>
 </html>
 
