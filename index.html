@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Пузырик</title>
     <link rel="icon" href="My_Logo.jpeg">
-    <meta name="google-site-verification" content="dq0_n6xUf9XgnjNIsmugNH2kRjcCkLbeddKEld0bCOw" />
 </head>
 <body>
     <h1>Пузырик</h1>
@@ -31,6 +30,7 @@
             margin: 10px 5px 10px 5px;
             color: white;
             border-color: greenyellow;
+            
 
         }
         .Puzar_apk_and:hover{
@@ -38,10 +38,22 @@
             margin: 15px 10px 15px 10px;
             color: white;
             border-color: rgb(0, 145, 255);
+            box-shadow: 10px 10px red;
+            
         }
+
+        
         .puzar_right{
             float: right;
             transform: rotate(-30deg);
+            animation: spin 10s linear infinite;
+            animation-play-state: paused; 
+        }
+        .puzar_right:hover{
+            animation-play-state: running;
+        }
+        @keyframes spin {
+            100% {transform: rotate(1turn); }
         }
         body{
             background-color: rgb(249, 252, 195);
@@ -49,3 +61,5 @@
     </style>
 </body>
 </html>
+
+
